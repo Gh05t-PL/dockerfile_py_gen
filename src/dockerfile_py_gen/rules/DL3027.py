@@ -24,14 +24,14 @@ def check_rule(instructions):
                 })
 
     return errors
-
-# Example usage
-dockerfile_instructions = [
-    "RUN apt update && apt install -y curl",
-    "RUN apt-get update && apt-get install -y wget",
-    "RUN apt-cache search git"
-]
-
-errors = check_rule(dockerfile_instructions)
-for error in errors:
-    print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
+#
+# # Example usage
+# dockerfile_instructions = [
+#     "RUN apt update && apt install -y curl",
+#     "RUN apt-get update && apt-get install -y wget",
+#     "RUN apt-cache search git"
+# ]
+#
+# errors = check_rule(dockerfile_instructions)
+# for error in errors:
+#     print(f"Error at line {error['line']}: {error['message']} ({error['code']})")

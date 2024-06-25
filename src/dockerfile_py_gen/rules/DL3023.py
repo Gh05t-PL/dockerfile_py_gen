@@ -39,17 +39,17 @@ def check_rule(instructions):
                     })
 
     return errors
-
-# Example usage
-dockerfile_instructions = [
-    "FROM alpine AS base",
-    "COPY --from=base /src /dst",
-    "FROM base AS builder",
-    "COPY --from=builder /src /dst",
-    "FROM invalid AS invalid",
-    "COPY --from=invalid /src /dst"
-]
-
-errors = check_rule(dockerfile_instructions)
-for error in errors:
-    print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
+#
+# # Example usage
+# dockerfile_instructions = [
+#     "FROM alpine AS base",
+#     "COPY --from=base /src /dst",
+#     "FROM base AS builder",
+#     "COPY --from=builder /src /dst",
+#     "FROM invalid AS invalid",
+#     "COPY --from=invalid /src /dst"
+# ]
+#
+# errors = check_rule(dockerfile_instructions)
+# for error in errors:
+#     print(f"Error at line {error['line']}: {error['message']} ({error['code']})")

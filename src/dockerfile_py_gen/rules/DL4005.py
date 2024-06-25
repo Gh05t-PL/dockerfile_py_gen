@@ -21,14 +21,14 @@ def contains_unsafe_shell_change(script: str) -> bool:
             if cmd.startswith("ln ") and "/bin/sh" in cmd.split():
                 return True
     return False
-
-# Example usage
-shell_scripts = [
-    "RUN ln -sf /bin/bash /bin/sh",
-    "RUN apt-get update && apt-get install -y curl",
-    "RUN apt-get install -y wget",
-]
-
-errors = check_rule(shell_scripts)
-for error in errors:
-    print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
+#
+# # Example usage
+# shell_scripts = [
+#     "RUN ln -sf /bin/bash /bin/sh",
+#     "RUN apt-get update && apt-get install -y curl",
+#     "RUN apt-get install -y wget",
+# ]
+#
+# errors = check_rule(shell_scripts)
+# for error in errors:
+#     print(f"Error at line {error['line']}: {error['message']} ({error['code']})")

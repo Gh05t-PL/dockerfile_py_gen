@@ -41,21 +41,21 @@ def check_rule(instructions, labelschema):
                 })
 
     return errors
-
-# Example usage
-dockerfile_instructions = [
-    "LABEL maintainer=example@example.com",
-    "LABEL version=1.0.0",
-    "LABEL release=2.1-beta+build.2024"
-]
-
-label_schema = {
-    "maintainer": "example@example.com",
-    "version": "1.0.0",
-    "release": "2.1-beta+build.2024"
-}
-
-errors = check_rule(dockerfile_instructions, label_schema)
-for error in errors:
-    print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
-# # TODO passing the label
+#
+# # Example usage
+# dockerfile_instructions = [
+#     "LABEL maintainer=example@example.com",
+#     "LABEL version=1.0.0",
+#     "LABEL release=2.1-beta+build.2024"
+# ]
+#
+# label_schema = {
+#     "maintainer": "example@example.com",
+#     "version": "1.0.0",
+#     "release": "2.1-beta+build.2024"
+# }
+#
+# errors = check_rule(dockerfile_instructions, label_schema)
+# for error in errors:
+#     print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
+# # # TODO passing the label

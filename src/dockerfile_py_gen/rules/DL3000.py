@@ -26,15 +26,15 @@ def check_rule(instructions):
                 })
 
     return errors
-
-# Example usage
-dockerfile_instructions = [
-    "WORKDIR /app",
-    "WORKDIR $HOME/app",
-    "WORKDIR C:\\app",
-    "WORKDIR app"
-]
-
-errors = check_rule(dockerfile_instructions)
-for error in errors:
-    print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
+#
+# # Example usage
+# dockerfile_instructions = [
+#     "WORKDIR /app",
+#     "WORKDIR $HOME/app",
+#     "WORKDIR C:\\app",
+#     "WORKDIR app"
+# ]
+#
+# errors = check_rule(dockerfile_instructions)
+# for error in errors:
+#     print(f"Error at line {error['line']}: {error['message']} ({error['code']})")

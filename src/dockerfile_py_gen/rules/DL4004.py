@@ -36,14 +36,14 @@ def check_rule(instructions):
                 })
 
     return state.errors
-
-# Example usage
-dockerfile_instructions = [
-    "FROM ubuntu:latest",
-    "ENTRYPOINT echo 'Hello, World!'",
-    "ENTRYPOINT echo 'This will override the previous ENTRYPOINT'"
-]
-
-errors = check_rule(dockerfile_instructions)
-for error in errors:
-    print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
+#
+# # Example usage
+# dockerfile_instructions = [
+#     "FROM ubuntu:latest",
+#     "ENTRYPOINT echo 'Hello, World!'",
+#     "ENTRYPOINT echo 'This will override the previous ENTRYPOINT'"
+# ]
+#
+# errors = check_rule(dockerfile_instructions)
+# for error in errors:
+#     print(f"Error at line {error['line']}: {error['message']} ({error['code']})")

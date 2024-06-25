@@ -32,16 +32,16 @@ def check_rule(instructions):
                 })
 
     return errors
-
-# Example usage
-dockerfile_instructions = [
-    "FROM ubuntu:latest",
-    "EXPOSE 8080",
-    "EXPOSE 70000",
-    "EXPOSE 1024-2048",
-    "EXPOSE 1024-70000"
-]
-
-errors = check_rule(dockerfile_instructions)
-for error in errors:
-    print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
+#
+# # Example usage
+# dockerfile_instructions = [
+#     "FROM ubuntu:latest",
+#     "EXPOSE 8080",
+#     "EXPOSE 70000",
+#     "EXPOSE 1024-2048",
+#     "EXPOSE 1024-70000"
+# ]
+#
+# errors = check_rule(dockerfile_instructions)
+# for error in errors:
+#     print(f"Error at line {error['line']}: {error['message']} ({error['code']})")

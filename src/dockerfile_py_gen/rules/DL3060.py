@@ -37,15 +37,15 @@ def is_yarn_install(command: str) -> bool:
 
 def is_yarn_cache_clean(command: str) -> bool:
     return re.search(r'\byarn\s+cache\s+clean\b', command) is not None
-
-# Example usage
-dockerfile_instructions = [
-    "FROM node:14",
-    "RUN yarn install",
-    "RUN apt-get update && apt-get install -y python3",
-    "RUN --mount=type=cache,target=/app yarn build",
-]
-
-errors = check_rule(dockerfile_instructions)
-for error in errors:
-    print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
+#
+# # Example usage
+# dockerfile_instructions = [
+#     "FROM node:14",
+#     "RUN yarn install",
+#     "RUN apt-get update && apt-get install -y python3",
+#     "RUN --mount=type=cache,target=/app yarn build",
+# ]
+#
+# errors = check_rule(dockerfile_instructions)
+# for error in errors:
+#     print(f"Error at line {error['line']}: {error['message']} ({error['code']})")

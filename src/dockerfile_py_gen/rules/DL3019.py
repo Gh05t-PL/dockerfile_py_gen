@@ -38,14 +38,14 @@ def check_rule(instructions):
                 })
 
     return errors
-
-# Example usage
-dockerfile_instructions = [
-    "RUN apk update && apk add curl",
-    "RUN apk add --no-cache wget",
-    "RUN apk add --update bash && rm -rf /var/cache/apk/*"
-]
-
-errors = check_rule(dockerfile_instructions)
-for error in errors:
-    print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
+#
+# # Example usage
+# dockerfile_instructions = [
+#     "RUN apk update && apk add curl",
+#     "RUN apk add --no-cache wget",
+#     "RUN apk add --update bash && rm -rf /var/cache/apk/*"
+# ]
+#
+# errors = check_rule(dockerfile_instructions)
+# for error in errors:
+#     print(f"Error at line {error['line']}: {error['message']} ({error['code']})")

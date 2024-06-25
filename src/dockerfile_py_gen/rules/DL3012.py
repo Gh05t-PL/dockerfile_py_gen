@@ -22,16 +22,16 @@ def check_rule(instructions):
                 })
 
     return errors
-
-# Example usage
-dockerfile_instructions = [
-    "FROM ubuntu:latest",
-    "HEALTHCHECK --interval=5m --timeout=3s CMD curl -f http://localhost/ || exit 1",
-    "HEALTHCHECK --interval=5m --timeout=3s CMD curl -f http://localhost/ || exit 1",
-    "FROM alpine",
-    "HEALTHCHECK --interval=5m --timeout=3s CMD curl -f http://localhost/ || exit 1"
-]
-
-errors = check_rule(dockerfile_instructions)
-for error in errors:
-    print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
+#
+# # Example usage
+# dockerfile_instructions = [
+#     "FROM ubuntu:latest",
+#     "HEALTHCHECK --interval=5m --timeout=3s CMD curl -f http://localhost/ || exit 1",
+#     "HEALTHCHECK --interval=5m --timeout=3s CMD curl -f http://localhost/ || exit 1",
+#     "FROM alpine",
+#     "HEALTHCHECK --interval=5m --timeout=3s CMD curl -f http://localhost/ || exit 1"
+# ]
+#
+# errors = check_rule(dockerfile_instructions)
+# for error in errors:
+#     print(f"Error at line {error['line']}: {error['message']} ({error['code']})")

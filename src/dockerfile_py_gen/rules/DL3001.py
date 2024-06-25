@@ -36,15 +36,15 @@ def check_rule(instructions):
                 })
 
     return errors
-
-# Example usage
-dockerfile_instructions = [
-    "RUN ssh some_host",
-    "RUN echo 'Hello World'",
-    "RUN vim some_file",
-    "RUN apt-get update && apt-get install -y curl"
-]
-
-errors = check_rule(dockerfile_instructions)
-for error in errors:
-    print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
+#
+# # Example usage
+# dockerfile_instructions = [
+#     "RUN ssh some_host",
+#     "RUN echo 'Hello World'",
+#     "RUN vim some_file",
+#     "RUN apt-get update && apt-get install -y curl"
+# ]
+#
+# errors = check_rule(dockerfile_instructions)
+# for error in errors:
+#     print(f"Error at line {error['line']}: {error['message']} ({error['code']})")

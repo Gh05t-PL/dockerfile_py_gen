@@ -32,14 +32,14 @@ def check_rule(instructions):
                 })
 
     return errors
-
-# Example usage
-dockerfile_instructions = [
-    "RUN yum install curl",
-    "RUN yum install -y wget",
-    "RUN yum groupinstall -y 'Development Tools'"
-]
-
-errors = check_rule(dockerfile_instructions)
-for error in errors:
-    print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
+#
+# # Example usage
+# dockerfile_instructions = [
+#     "RUN yum install curl",
+#     "RUN yum install -y wget",
+#     "RUN yum groupinstall -y 'Development Tools'"
+# ]
+#
+# errors = check_rule(dockerfile_instructions)
+# for error in errors:
+#     print(f"Error at line {error['line']}: {error['message']} ({error['code']})")

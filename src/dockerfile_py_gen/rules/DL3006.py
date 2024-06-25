@@ -46,15 +46,15 @@ def check_rule(instructions):
                     state = new_state
 
     return errors
-
-# Example usage
-dockerfile_instructions = [
-    "FROM ubuntu",
-    "FROM scratch",
-    "FROM alpine as builder",
-    "FROM builder"
-]
-
-errors = check_rule(dockerfile_instructions)
-for error in errors:
-    print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
+#
+# # Example usage
+# dockerfile_instructions = [
+#     "FROM ubuntu",
+#     "FROM scratch",
+#     "FROM alpine as builder",
+#     "FROM builder"
+# ]
+#
+# errors = check_rule(dockerfile_instructions)
+# for error in errors:
+#     print(f"Error at line {error['line']}: {error['message']} ({error['code']})")

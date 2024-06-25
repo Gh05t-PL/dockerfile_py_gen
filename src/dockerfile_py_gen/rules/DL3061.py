@@ -26,16 +26,16 @@ def check_rule(instructions):
         })
 
     return errors
-
-# Example usage
-dockerfile_instructions = [
-    "ARG VERSION=latest",
-    "RUN apt-get update",
-    "FROM python:3.9",
-    "# This is a comment",
-    "COPY . /app",
-]
-
-errors = check_rule(dockerfile_instructions)
-for error in errors:
-    print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
+#
+# # Example usage
+# dockerfile_instructions = [
+#     "ARG VERSION=latest",
+#     "RUN apt-get update",
+#     "FROM python:3.9",
+#     "# This is a comment",
+#     "COPY . /app",
+# ]
+#
+# errors = check_rule(dockerfile_instructions)
+# for error in errors:
+#     print(f"Error at line {error['line']}: {error['message']} ({error['code']})")

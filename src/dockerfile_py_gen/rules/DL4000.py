@@ -12,15 +12,15 @@ def check_rule(instructions):
             })
 
     return errors
-
-# Example usage
-dockerfile_instructions = [
-    "FROM python:3.9",
-    "MAINTAINER John Doe <john.doe@example.com>",
-    "RUN apt-get update",
-    "COPY . /app",
-]
-
-errors = check_rule(dockerfile_instructions)
-for error in errors:
-    print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
+#
+# # Example usage
+# dockerfile_instructions = [
+#     "FROM python:3.9",
+#     "MAINTAINER John Doe <john.doe@example.com>",
+#     "RUN apt-get update",
+#     "COPY . /app",
+# ]
+#
+# errors = check_rule(dockerfile_instructions)
+# for error in errors:
+#     print(f"Error at line {error['line']}: {error['message']} ({error['code']})")

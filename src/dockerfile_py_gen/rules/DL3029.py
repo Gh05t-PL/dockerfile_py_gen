@@ -18,14 +18,14 @@ def check_rule(instructions):
                 })
 
     return errors
-
-# Example usage
-dockerfile_instructions = [
-    "FROM --platform=$BUILDPLATFORM ubuntu:20.04",
-    "FROM alpine:latest",
-    "FROM --platform=$TARGETPLATFORM node:14"
-]
-
-errors = check_rule(dockerfile_instructions)
-for error in errors:
-    print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
+#
+# # Example usage
+# dockerfile_instructions = [
+#     "FROM --platform=$BUILDPLATFORM ubuntu:20.04",
+#     "FROM alpine:latest",
+#     "FROM --platform=$TARGETPLATFORM node:14"
+# ]
+#
+# errors = check_rule(dockerfile_instructions)
+# for error in errors:
+#     print(f"Error at line {error['line']}: {error['message']} ({error['code']})")

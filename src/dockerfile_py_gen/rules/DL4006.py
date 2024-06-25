@@ -31,15 +31,15 @@ def contains_shell_option(script: str) -> bool:
     tokens = script.split()
     return any(token == "SHELL" and "-o" in tokens[i+1:i+3] and tokens[i+2] == "pipefail"
                for i, token in enumerate(tokens[:-2]))
-
-# Example usage
-shell_scripts = [
-    "FROM alpine",
-    "RUN apt-get update && apt-get install -y curl",
-    "RUN set -o pipefail && apt-get install -y wget",
-    "RUN apk update | apk add --no-cache bash && echo 'Hello World'",
-]
-
-errors = check_rule(shell_scripts)
-for error in errors:
-    print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
+#
+# # Example usage
+# shell_scripts = [
+#     "FROM alpine",
+#     "RUN apt-get update && apt-get install -y curl",
+#     "RUN set -o pipefail && apt-get install -y wget",
+#     "RUN apk update | apk add --no-cache bash && echo 'Hello World'",
+# ]
+#
+# errors = check_rule(shell_scripts)
+# for error in errors:
+#     print(f"Error at line {error['line']}: {error['message']} ({error['code']})")

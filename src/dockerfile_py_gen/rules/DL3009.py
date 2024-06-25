@@ -80,15 +80,15 @@ def check_rule(instructions):
         })
 
     return errors
-
-# Example usage
-dockerfile_instructions = [
-    "FROM ubuntu:latest",
-    "RUN apt-get update && apt-get install -y curl",
-    "RUN rm -rf /var/lib/apt/lists/*",
-    "RUN apt-get update && apt-get install -y wget"
-]
-
-errors = check_rule(dockerfile_instructions)
-for error in errors:
-    print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
+#
+# # Example usage
+# dockerfile_instructions = [
+#     "FROM ubuntu:latest",
+#     "RUN apt-get update && apt-get install -y curl",
+#     "RUN rm -rf /var/lib/apt/lists/*",
+#     "RUN apt-get update && apt-get install -y wget"
+# ]
+#
+# errors = check_rule(dockerfile_instructions)
+# for error in errors:
+#     print(f"Error at line {error['line']}: {error['message']} ({error['code']})")

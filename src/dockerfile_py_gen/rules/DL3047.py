@@ -34,14 +34,14 @@ def check_rule(instructions):
                 })
 
     return errors
-
-# Example usage
-dockerfile_instructions = [
-    "RUN wget http://example.com",
-    "RUN wget --progress=dot:giga http://example.com",
-    "RUN wget -q http://example.com"
-]
-
-errors = check_rule(dockerfile_instructions)
-for error in errors:
-    print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
+#
+# # Example usage
+# dockerfile_instructions = [
+#     "RUN wget http://example.com",
+#     "RUN wget --progress=dot:giga http://example.com",
+#     "RUN wget -q http://example.com"
+# ]
+#
+# errors = check_rule(dockerfile_instructions)
+# for error in errors:
+#     print(f"Error at line {error['line']}: {error['message']} ({error['code']})")

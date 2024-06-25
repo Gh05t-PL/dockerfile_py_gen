@@ -44,14 +44,14 @@ def extract_commands(args):
         0 if "curl" in cmd else 1
         for cmd in re.findall(r'\b(curl|wget)\b', args)
     }
-
-# Example usage
-dockerfile_instructions = [
-    "FROM alpine",
-    "RUN apt-get update && apt-get install -y curl",
-    "RUN wget https://example.com"
-]
-
-errors = check_rule(dockerfile_instructions)
-for error in errors:
-    print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
+#
+# # Example usage
+# dockerfile_instructions = [
+#     "FROM alpine",
+#     "RUN apt-get update && apt-get install -y curl",
+#     "RUN wget https://example.com"
+# ]
+#
+# errors = check_rule(dockerfile_instructions)
+# for error in errors:
+#     print(f"Error at line {error['line']}: {error['message']} ({error['code']})")

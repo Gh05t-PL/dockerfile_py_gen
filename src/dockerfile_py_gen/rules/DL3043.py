@@ -18,15 +18,15 @@ def check_rule(instructions):
                 })
 
     return errors
-
-# Example usage
-dockerfile_instructions = [
-    "ONBUILD RUN echo 'Hello World'",
-    "ONBUILD ONBUILD RUN echo 'Hello World'",
-    "ONBUILD FROM alpine",
-    "ONBUILD MAINTAINER example@example.com"
-]
-
-errors = check_rule(dockerfile_instructions)
-for error in errors:
-    print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
+#
+# # Example usage
+# dockerfile_instructions = [
+#     "ONBUILD RUN echo 'Hello World'",
+#     "ONBUILD ONBUILD RUN echo 'Hello World'",
+#     "ONBUILD FROM alpine",
+#     "ONBUILD MAINTAINER example@example.com"
+# ]
+#
+# errors = check_rule(dockerfile_instructions)
+# for error in errors:
+#     print(f"Error at line {error['line']}: {error['message']} ({error['code']})")

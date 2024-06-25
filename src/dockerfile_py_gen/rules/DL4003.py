@@ -36,14 +36,14 @@ def check_rule(instructions):
                 })
 
     return state.errors
-
-# Example usage
-dockerfile_instructions = [
-    "FROM ubuntu:latest",
-    "CMD echo 'Hello, World!'",
-    "CMD echo 'This will override the previous CMD'"
-]
-
-errors = check_rule(dockerfile_instructions)
-for error in errors:
-    print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
+#
+# # Example usage
+# dockerfile_instructions = [
+#     "FROM ubuntu:latest",
+#     "CMD echo 'Hello, World!'",
+#     "CMD echo 'This will override the previous CMD'"
+# ]
+#
+# errors = check_rule(dockerfile_instructions)
+# for error in errors:
+#     print(f"Error at line {error['line']}: {error['message']} ({error['code']})")

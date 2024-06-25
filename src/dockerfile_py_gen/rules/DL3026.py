@@ -41,17 +41,17 @@ def check_rule(instructions, allowed_registries):
                 })
 
     return errors
-
-# Example usage
-dockerfile_instructions = [
-    "FROM docker.io/alpine AS base",
-    "FROM unauthorized.registry/alpine AS builder",
-    "FROM scratch"
-]
-
-allowed_registries = {"docker.io", "hub.docker.com"}
-
-errors = check_rule(dockerfile_instructions, allowed_registries)
-for error in errors:
-    print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
-# TODO add passing
+#
+# # Example usage
+# dockerfile_instructions = [
+#     "FROM docker.io/alpine AS base",
+#     "FROM unauthorized.registry/alpine AS builder",
+#     "FROM scratch"
+# ]
+#
+# allowed_registries = {"docker.io", "hub.docker.com"}
+#
+# errors = check_rule(dockerfile_instructions, allowed_registries)
+# for error in errors:
+#     print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
+# # TODO add passing

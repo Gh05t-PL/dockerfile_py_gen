@@ -68,14 +68,14 @@ def check_rule(instructions):
                 })
 
     return errors
-
-# Example usage
-dockerfile_instructions = [
-    "RUN npm install somepackage",
-    "RUN npm install somepackage@1.0",
-    "RUN npm install git+https://github.com/user/repo#commit"
-]
-
-errors = check_rule(dockerfile_instructions)
-for error in errors:
-    print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
+#
+# # Example usage
+# dockerfile_instructions = [
+#     "RUN npm install somepackage",
+#     "RUN npm install somepackage@1.0",
+#     "RUN npm install git+https://github.com/user/repo#commit"
+# ]
+#
+# errors = check_rule(dockerfile_instructions)
+# for error in errors:
+#     print(f"Error at line {error['line']}: {error['message']} ({error['code']})")

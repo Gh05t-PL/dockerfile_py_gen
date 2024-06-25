@@ -61,14 +61,14 @@ def check_rule(instructions):
                 })
 
     return errors
-
-# Example usage
-dockerfile_instructions = [
-    "RUN pip install somepackage",
-    "RUN pip install somepackage==1.0",
-    "RUN pip install -r requirements.txt"
-]
-
-errors = check_rule(dockerfile_instructions)
-for error in errors:
-    print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
+#
+# # Example usage
+# dockerfile_instructions = [
+#     "RUN pip install somepackage",
+#     "RUN pip install somepackage==1.0",
+#     "RUN pip install -r requirements.txt"
+# ]
+#
+# errors = check_rule(dockerfile_instructions)
+# for error in errors:
+#     print(f"Error at line {error['line']}: {error['message']} ({error['code']})")

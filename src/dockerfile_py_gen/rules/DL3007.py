@@ -35,15 +35,15 @@ def check_rule(instructions):
                 })
 
     return errors
-
-# Example usage
-dockerfile_instructions = [
-    "FROM ubuntu:latest",
-    "FROM alpine:3.12",
-    "FROM myrepo/myimage@sha256:abc123",
-    "FROM debian"
-]
-
-errors = check_rule(dockerfile_instructions)
-for error in errors:
-    print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
+#
+# # Example usage
+# dockerfile_instructions = [
+#     "FROM ubuntu:latest",
+#     "FROM alpine:3.12",
+#     "FROM myrepo/myimage@sha256:abc123",
+#     "FROM debian"
+# ]
+#
+# errors = check_rule(dockerfile_instructions)
+# for error in errors:
+#     print(f"Error at line {error['line']}: {error['message']} ({error['code']})")

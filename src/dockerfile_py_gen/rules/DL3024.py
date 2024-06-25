@@ -26,15 +26,15 @@ def check_rule(instructions):
                 state.aliases.add(alias)
 
     return errors
-
-# Example usage
-dockerfile_instructions = [
-    "FROM alpine AS base",
-    "FROM ubuntu AS base",
-    "FROM alpine AS builder",
-    "FROM ubuntu AS builder"
-]
-
-errors = check_rule(dockerfile_instructions)
-for error in errors:
-    print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
+#
+# # Example usage
+# dockerfile_instructions = [
+#     "FROM alpine AS base",
+#     "FROM ubuntu AS base",
+#     "FROM alpine AS builder",
+#     "FROM ubuntu AS builder"
+# ]
+#
+# errors = check_rule(dockerfile_instructions)
+# for error in errors:
+#     print(f"Error at line {error['line']}: {error['message']} ({error['code']})")

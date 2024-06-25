@@ -62,18 +62,18 @@ def check_rule(instructions):
             errors.append(make_fail(user_line, code, severity, message))
 
     return errors
-
-# Example usage
-dockerfile_instructions = [
-    "FROM ubuntu:latest",
-    "USER root",
-    "RUN apt-get update",
-    "USER someuser",
-    "RUN echo 'Hello World'",
-    "USER root",
-    "RUN apt-get install -y sudo"
-]
-
-errors = check_rule(dockerfile_instructions)
-for error in errors:
-    print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
+#
+# # Example usage
+# dockerfile_instructions = [
+#     "FROM ubuntu:latest",
+#     "USER root",
+#     "RUN apt-get update",
+#     "USER someuser",
+#     "RUN echo 'Hello World'",
+#     "USER root",
+#     "RUN apt-get install -y sudo"
+# ]
+#
+# errors = check_rule(dockerfile_instructions)
+# for error in errors:
+#     print(f"Error at line {error['line']}: {error['message']} ({error['code']})")
